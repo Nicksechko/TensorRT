@@ -52,6 +52,7 @@ using namespace nvinfer1::plugin;
 #include "reorgPlugin.h"
 #include "resizeNearestPlugin.h"
 #include "specialSlicePlugin.h"
+#include "tanhshrinkPlugin.h"
 #include "split.h"
 
 using nvinfer1::plugin::RPROIParams;
@@ -191,6 +192,7 @@ extern "C"
         initializePlugin<nvinfer1::plugin::RPROIPluginCreator>(logger, libNamespace);
         initializePlugin<nvinfer1::plugin::SpecialSlicePluginCreator>(logger, libNamespace);
         initializePlugin<nvinfer1::plugin::SplitPluginCreator>(logger, libNamespace);
+        initializePlugin<nvinfer1::plugin::TanhshrinkPluginCreator>(logger, libNamespace);
         return true;
     }
 } // extern "C"
