@@ -7,7 +7,7 @@
 	cp -r data build/out
 	```
 
-3.  Run sample this this command:
+3.  Run sample with this command:
 	```
 	cd build/out
 	LD_LIBRARY_PATH=. ./sample_onnx_mnist_tanhshrink
